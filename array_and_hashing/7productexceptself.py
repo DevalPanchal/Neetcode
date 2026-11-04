@@ -20,6 +20,8 @@ class Solution:
         for i in range(n - 2, -1, -1):
             suffix[i] = suffix[i + 1] * nums[i + 1]
 
+        print(prefix, suffix)
+
         for i in range(n):
             res[i] = prefix[i] * suffix[i]
 
@@ -28,5 +30,5 @@ class Solution:
 nums = [1,2,4,6]
 nums2 = [-1,0,1,2,3]
 s = Solution()
-res = s.productExceptSelf(nums2)
+res = s.productExceptSelf(nums)
 print(res)
