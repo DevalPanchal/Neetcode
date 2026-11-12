@@ -26,7 +26,30 @@ class ListNode:
 
 class Solution:
     def reorderList(self, head: Optional[ListNode]) -> None:
-        pass
+        if not head:
+            return
+
+        # store every node in list
+        nodes = []
+        while head:
+            nodes.append(head)
+            head = head.next
+
+        i = 0
+        j = len(nodes) - 1
+
+
+        while i < j:
+            nodes[i].next = nodes[j] # front points to back
+            i += 1 # increase to next node
+            if i == j:
+                break
+            nodes[j].next = nodes[i] # back points to the next front
+            j -= 1
+
+        nodes[i].next = None # last node must end the list
+        
         
 
-        
+head = ListNode(0, ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5, ListNode(6)))))))
+s = Solution().reorderList(head)
