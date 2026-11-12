@@ -17,4 +17,16 @@ These numbers represent node positions, not the values stored in the nodes.
 
 You may not modify the values in the list's nodes, but instead you must reorder the nodes themselves.
 '''
+from typing import Optional
 
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+class Solution:
+    def reorderList(self, head: Optional[ListNode]) -> None:
+        pass
+        
+
+        
