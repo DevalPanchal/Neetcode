@@ -31,10 +31,10 @@ class Solution:
             # start adding all possible values
             sum = carry + x + y
 
-            # get remainder
+            # get remainder, number to carry
             carry = sum // 10
 
-            # create new listNode for next node
+            # create new listNode for next node, digit to write
             current.next = ListNode(sum % 10)
 
             # move node
