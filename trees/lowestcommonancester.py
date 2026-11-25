@@ -26,14 +26,15 @@ def lowestCommonAncestor2(root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
     if root is None:
         return None
 
-    if p.val < node.val and q.val < node.val:
-        node = node.left
-
-    elif p.val > node.val and q.val > node.val:
-        node = node.right
-
-    else:
-        return node
+    while node:
+        if p.val < node.val and q.val < node.val:
+            node = node.left
+    
+        elif p.val > node.val and q.val > node.val:
+            node = node.right
+    
+        else:
+            return node
 
 # ---------- test helpers ----------
 
