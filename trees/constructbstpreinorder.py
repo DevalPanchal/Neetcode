@@ -1,3 +1,9 @@
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
 def buildTree(preorder: list[int], inorder: list[int]) -> TreeNode | None:
     idx_map = {val: i for i, val in enumerate(inorder)}
     pre_idx = 0
